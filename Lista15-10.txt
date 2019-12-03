@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+public class Ex10 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int []VetorA = new int[10];
+		int []VetorB = new int[10];
+		int []VetorC = new int[20];
+	
+	for(int i=0;i<10;i++){
+		System.out.println("Digite um número para a "+(i+1) + "º posição do vetor A" );
+		VetorA[i]=in.nextInt();
+	}
+
+	for(int i=0;i<10;i++){
+		System.out.println("Digite um número para a "+(i+1) + "º posição do vetor B" );
+		VetorB[i]=in.nextInt();
+	}
+	for(int i=0;i<=VetorC.length;i++){
+		VetorC[i]=VetorA[i];
+
+		if(VetorA[i]!=VetorB[i]){
+			
+			VetorC[i]=VetorB[i];
+		}
+
+		System.out.println(VetorC[i] +".");
+	}
+
+
+	}
+
+}
