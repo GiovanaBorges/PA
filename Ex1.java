@@ -3,19 +3,26 @@ public class Ex1 {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int VetorA[] = new int [10];
-		int VetorB[]= new int [10];
+		int VetorA[] = new int [20];
+		int VetorB[] = new int [20];
+		int i,j=19;
 		
-		for(int i=0; i<VetorA.length;i++) {
-			System.out.println("Digite a posição " +(i+1));
-			VetorA[i] = in.nextInt();
+		for(i=0;i<VetorA.length;i++) {
+		System.out.println("Digite o número da  posição " +(i+1) );
+		VetorA[i]=in.nextInt();
 		}
-    for(int i =9;i>=0;--i) {
-    	VetorB[i]=VetorA[i]*VetorA[i];
-    }
-	for(int i=0;i<VetorA.length;i++) {
-		System.out.println(" raiz quadrada do número  " +VetorA[i]+ " = " +VetorB[i] );
+	for(i=0;i<VetorA.length;i++,--j) {
+		if(VetorA[i]%2==0) {
+			VetorB[i]=VetorA[i];
+			System.out.println("Par");
+			System.out.println(" " +VetorB[i]);
+		}else {
+			VetorB[j]=VetorA[i];
+			System.out.println("Ímpa");
+			System.out.println(" " +VetorB[i]);
+		}
 	}
+	
 	}
-
 }
+
